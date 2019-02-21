@@ -1,25 +1,23 @@
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2048
+TARGET_SCREEN_WIDTH := 1536
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/asus/Z00A/device.mk)
+$(call inherit-product, device/asus/P01M/device.mk)
 
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
-DEVICE_PACKAGE_OVERLAYS += device/asus/Z00A/overlay
+DEVICE_PACKAGE_OVERLAYS += device/asus/P01M/overlay
 
 PRODUCT_RUNTIMES := runtime_libart_default
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_Z00A
+PRODUCT_NAME := lineage_P01M
 PRODUCT_BRAND := asus
-PRODUCT_MODEL := ASUS_Z00A
+PRODUCT_MODEL := ASUS_P01M
 PRODUCT_MANUFACTURER := asus
-PRODUCT_DEVICE := Z00A
+PRODUCT_DEVICE := P01M
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=WW_Z00A \

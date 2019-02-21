@@ -2,6 +2,6 @@
 
 set -e
 
-export DEVICE=Z00A
+export DEVICE=P01M
 export VENDOR=asus
 ./../../$VENDOR/mofd-common/setup-makefiles.sh $@

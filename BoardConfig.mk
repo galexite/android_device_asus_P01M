@@ -17,18 +17,20 @@
 # inherit from common mofd-common
 -include device/asus/mofd-common/BoardConfigCommon.mk
 
+TARGET_KERNEL_CONFIG := i386_moor_defconfig
+
 # Charger
-BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/asus/Z00A/charger/images
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/asus/P01M/charger/images
 
 # Mkbootimg
-BOARD_BOOT_KEY := device/asus/Z00A/keys/boot_z00a.sig
-BOARD_RECOVERY_KEY := device/asus/Z00A/keys/recovery_z00a.sig
+BOARD_BOOT_KEY := device/asus/P01M/keys/boot_z00a.sig
+BOARD_RECOVERY_KEY := device/asus/P01M/keys/recovery_z00a.sig
 
 # Partitions
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 59261286400
 
 # Require Ifwi version
-TARGET_BOARD_INFO_FILE ?= device/asus/Z00A/board-info.txt
+TARGET_BOARD_INFO_FILE ?= device/asus/P01M/board-info.txt
 
 # Use the non-open-source parts, if they're present
 -include vendor/asus/Z00A/BoardConfigVendor.mk
